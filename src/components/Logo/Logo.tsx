@@ -3,15 +3,21 @@ import React from 'react';
 import { View, Text, Image} from 'react-native';
 
 import { styles } from './LogoStyle';
-import LogoImg from '../../../assets/cadeado.png';
+import LogoImg from '../../../assets/logo2.png';
 export function Logo() {
     return(
-        <View >
+        <>
             <Text style={styles.title}>
                 Strong Pass Generator
             </Text>
-            <Image source={LogoImg}/>
-            
-        </View>
+            <Image 
+            source={LogoImg}
+            style={{
+                resizeMode: 'contain',
+                height:200,
+
+            }}
+            />
+        </>
     )
 }
