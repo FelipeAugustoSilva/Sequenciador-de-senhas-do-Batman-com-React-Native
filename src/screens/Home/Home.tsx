@@ -14,12 +14,12 @@ export default function Home(){
                 <Logo />
             </View>
 
-            <View >
+            <View style={styles.inputContainer}>
                 <BatTextInput />
             </View>
             
             
-            <StatusBar style="auto" />
+            <StatusBar style="light" />
         </View>
     )       
 }
