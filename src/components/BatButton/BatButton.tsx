@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button, View, Text, Pressable } from 'react-native';
+import * as Clipboard from 'expo-clipboard';
 
 import { styles } from './BatButtonStyle';
 import { BatTextInput } from '../BatTextInput/BatTextInput';
@@ -16,6 +17,10 @@ export function BatButton() {
     setPass(genetateToken)
   }
 
+  function hnadleCopyButton(){
+    Clipboard.setStringAsync(pass)
+  }
+
   return (
     <View>
         <>
@@ -25,7 +30,7 @@ export function BatButton() {
                 <Text style={styles.text}>GENERATE</Text>
             </Pressable>
 
-            <Pressable onPress={()=>{console.log("Teste")}} style={styles.button}>
+            <Pressable onPress={hnadleCopyButton} style={styles.button}>
                 <Text style={styles.text}>COPY</Text>
             </Pressable>
         </>   
